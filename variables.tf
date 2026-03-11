@@ -80,6 +80,12 @@ variable "subnet_enforce_private_link_service_network_policies" {
   description = "A map of subnet name to enable/disable private link service network policies on the subnet."
 }
 
+variable "subnet_default_outbound_access_enabled" {
+  type        = map(bool)
+  default     = {}
+  description = "A map of subnet name to enable/disable default outbound access on the subnet."
+}
+
 variable "subnet_names" {
   type        = list(string)
   default     = ["subnet1", "subnet2", "subnet3"]
